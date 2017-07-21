@@ -30,6 +30,7 @@ public class MyReceiver extends BroadcastReceiver {
             // for Auto Rejecting Call
             AutoRejectCall(context, number,intent);
 
+            //inserting Number into Database
             databaseAdapter database = new databaseAdapter(context);
             long id = database.insertNumber(number);
 
@@ -42,7 +43,7 @@ public class MyReceiver extends BroadcastReceiver {
 
         }
     }
-
+// Auto Rejecting Call
     private void AutoRejectCall(Context context, String number,Intent intent) {
         try {
 
@@ -80,7 +81,7 @@ public class MyReceiver extends BroadcastReceiver {
         }
 
     }
-
+//Send SMS TO Rejected Caller
     private void SendAutoSms(String number) {
 
         SmsManager smsManager=SmsManager.getDefault();

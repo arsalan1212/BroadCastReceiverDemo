@@ -45,6 +45,8 @@ public static final int REQUEST_CODE=100;
         recyclerView.setAdapter(adapter);
         setAdapaterData();
 
+        //Allow the Permission Manually
+
        /* if(Build.VERSION.SDK_INT <= 23){
 
         }
